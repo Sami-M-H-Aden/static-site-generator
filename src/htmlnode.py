@@ -5,10 +5,10 @@ class HTMLNode:
         self.children=children
         self.props=props
     def to_html(self):
-        raise NotImplementedError()
+        raise NotImplementedError("to_html method not implemented")
     def props_to_html(self):
         if not isinstance(self.props,dict):
-            raise Exception("Not possible")
+            return ""
         changed_html=""
         for key in self.props:
             changed_html+=f"{key}={self.props[key]} "
